@@ -2,7 +2,7 @@
 
 Welcome to my portfolio repository! This project contains the source code for my personal portfolio website, where I'll showcase my journey, projects, and experience as a Flutter developer.
 
-## 🚧 Coming Soon
+## Coming Soon
 
 The portfolio website is currently under development and will be available soon. Once launched, it will feature:
 
