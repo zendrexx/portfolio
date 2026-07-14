@@ -2,14 +2,7 @@
 
 Welcome to my portfolio repository! This project contains the source code for my personal portfolio website, where I'll showcase my journey, projects, and experience as a Flutter developer.
 
-<a
-  href="https://portfolio-zendrex.pages.dev/"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="btn btn-primary"
->
-  View Portfolio
-</a>
+https://portfolio-zendrex.pages.dev/
 
 The portfolio website is currently under development and will be available soon. Once launched, it will feature:
 
