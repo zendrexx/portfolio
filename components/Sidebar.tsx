@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Mail, Phone, MapPin, ChevronDown } from "lucide-react";
+import { Mail, MapPin, ChevronDown } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/BrandIcons";
 import { profile } from "@/data/profile";
 import Typewriter from "@/components/ui/Typewriter";
@@ -117,12 +117,6 @@ function SidebarDetails() {
           label="Email"
           value={profile.email}
           href={`mailto:${profile.email}`}
-        />
-        <ContactRow
-          icon={Phone}
-          label="Phone"
-          value={profile.phone}
-          href={`tel:${profile.phone.replaceAll("-", "")}`}
         />
         <ContactRow icon={MapPin} label="Location" value={profile.location} />
       </div>

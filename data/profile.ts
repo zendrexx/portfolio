@@ -15,8 +15,7 @@ export const profile = {
     "UI/UX Designer",
   ],
   email: "adversalozen8@gmail.com",
-  phone: "0991-599-6041",
-  location: "Binmaley, Pangasinan, Philippines",
+  location: "Pangasinan, Philippines",
   socials: {
     linkedin: "https://www.linkedin.com/in/zendrex-adversalo-1abb69355",
     github: "https://github.com/zendrexx",
@@ -67,7 +66,7 @@ export const resume = {
     {
       role: "Founder & Developer",
       org: "Powerlifting competition app",
-      place: "Binmaley, Pangasinan",
+      place: "Pangasinan, Philippines",
       period: "Aug 2025 — Present",
       current: true,
       points: [
