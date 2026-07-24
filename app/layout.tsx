@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-
+//new ver
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
