@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "portfolio",
+  "compatibility_date": "2026-07-24",
+  "assets": {
+    // Next.js static export output (see next.config.ts -> output: "export")
+    "directory": "./out",
+    // Serve out/404.html for unmatched routes instead of a bare Cloudflare error
+    "not_found_handling": "404-page"
+  }
+}
