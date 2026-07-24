@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "portfolio",
+  "name": "zendrex",
   "compatibility_date": "2026-07-24",
   "assets": {
     // Next.js static export output (see next.config.ts -> output: "export")
