@@ -3,6 +3,8 @@ import {
   Monitor,
   Database,
   PenTool,
+  Dumbbell,
+  Leaf,
   type LucideIcon,
 } from "lucide-react";
 
@@ -123,6 +125,8 @@ export type Project = {
   title: string;
   category: ProjectCategory;
   flagship?: boolean;
+  /** Badge icon for flagship cards — pick one that fits the product. */
+  flagshipIcon?: LucideIcon;
   tagline: string;
   description: string;
   role: string;
@@ -136,6 +140,8 @@ export const projects: Project[] = [
   {
     title: "Zebite — AI Grocery Planner",
     category: "Mobile",
+    flagship: true,
+    flagshipIcon: Leaf,
     tagline: "Smarter groceries, planned by AI",
     description:
       "A Flutter app that plans a week of meals and groceries around three inputs: what you already have, what you want, and your budget. The AI checks your pantry first and only recommends buying what's missing — cutting food waste and overspending. Ships with pantry-first meal generation (real recipes, quantities, per-meal macros), a deterministic nutrition engine (Mifflin-St Jeor BMR → TDEE → goal-adjusted targets), budget-capped grocery lists with money-saving swaps, snap-to-stock receipt and shelf scanning via AI vision, crowdsourced local prices, expiry reminders, and offline-first cloud sync. Built PH-first (₱).",
@@ -157,6 +163,7 @@ export const projects: Project[] = [
     title: "Powerlifting competition app",
     category: "Mobile",
     flagship: true,
+    flagshipIcon: Dumbbell,
     tagline: "Powerlifting tracker with a community vision",
     description:
       "A workout app built around gamification — performance dashboard, progress tracking, and streak mechanics that make training feel like leveling up. Currently focused on powerlifting; the long-term vision is a community platform where lifters share programs and compete.",

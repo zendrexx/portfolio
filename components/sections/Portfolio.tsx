@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Dumbbell, ArrowUpRight } from "lucide-react";
+import { X, Star, ArrowUpRight } from "lucide-react";
 import { projects, projectFilters, type Project } from "@/data/profile";
 import SectionTitle from "@/components/ui/SectionTitle";
 
@@ -45,54 +45,57 @@ export default function Portfolio() {
 
       <motion.div layout className="grid gap-5 sm:grid-cols-2">
         <AnimatePresence mode="popLayout">
-          {visible.map((project) => (
-            <motion.button
-              key={project.title}
-              layout
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
-              whileHover={{ y: -4 }}
-              onClick={() => setSelected(project)}
-              className="group overflow-hidden rounded-2xl border border-edge bg-raised text-left transition-shadow hover:shadow-[0_8px_40px_-12px_rgba(230,179,37,0.25)]"
-            >
-              <div
-                className={`relative flex h-40 items-center justify-center overflow-hidden bg-gradient-to-br ${project.gradient}`}
+          {visible.map((project) => {
+            const FlagshipIcon = project.flagshipIcon ?? Star;
+            return (
+              <motion.button
+                key={project.title}
+                layout
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.3 }}
+                whileHover={{ y: -4 }}
+                onClick={() => setSelected(project)}
+                className="group overflow-hidden rounded-2xl border border-edge bg-raised text-left transition-shadow hover:shadow-[0_8px_40px_-12px_rgba(230,179,37,0.25)]"
               >
-                {project.image ? (
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    sizes="(min-width: 640px) 50vw, 100vw"
-                    className="object-cover"
-                  />
-                ) : (
-                  <span className="font-display text-5xl font-bold text-white/15">
-                    {project.initials}
+                <div
+                  className={`relative flex h-40 items-center justify-center overflow-hidden bg-gradient-to-br ${project.gradient}`}
+                >
+                  {project.image ? (
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      sizes="(min-width: 640px) 50vw, 100vw"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <span className="font-display text-5xl font-bold text-white/15">
+                      {project.initials}
+                    </span>
+                  )}
+                  {project.flagship && (
+                    <span className="absolute left-4 top-4 flex items-center gap-1.5 rounded-lg bg-black/50 px-2.5 py-1 text-xs font-medium text-gold backdrop-blur-sm">
+                      <FlagshipIcon size={12} /> Flagship
+                    </span>
+                  )}
+                  <span className="absolute right-4 top-4 rounded-lg border border-edge bg-black/40 p-1.5 text-muted opacity-0 backdrop-blur-sm transition-opacity group-hover:opacity-100">
+                    <ArrowUpRight size={14} />
                   </span>
-                )}
-                {project.flagship && (
-                  <span className="absolute left-4 top-4 flex items-center gap-1.5 rounded-lg bg-black/50 px-2.5 py-1 text-xs font-medium text-gold backdrop-blur-sm">
-                    <Dumbbell size={12} /> Flagship
-                  </span>
-                )}
-                <span className="absolute right-4 top-4 rounded-lg border border-edge bg-black/40 p-1.5 text-muted opacity-0 backdrop-blur-sm transition-opacity group-hover:opacity-100">
-                  <ArrowUpRight size={14} />
-                </span>
-              </div>
-              <div className="p-5">
-                <p className="text-xs uppercase tracking-wider text-gold/80">
-                  {project.category}
-                </p>
-                <h4 className="mt-1.5 font-display font-semibold">
-                  {project.title}
-                </h4>
-                <p className="mt-1 text-sm text-muted">{project.tagline}</p>
-              </div>
-            </motion.button>
-          ))}
+                </div>
+                <div className="p-5">
+                  <p className="text-xs uppercase tracking-wider text-gold/80">
+                    {project.category}
+                  </p>
+                  <h4 className="mt-1.5 font-display font-semibold">
+                    {project.title}
+                  </h4>
+                  <p className="mt-1 text-sm text-muted">{project.tagline}</p>
+                </div>
+              </motion.button>
+            );
+          })}
         </AnimatePresence>
       </motion.div>
 
