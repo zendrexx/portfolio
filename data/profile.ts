@@ -6,6 +6,7 @@ import {
   Dumbbell,
   Leaf,
   TrendingUp,
+  Boxes,
   type LucideIcon,
 } from "lucide-react";
 
@@ -189,6 +190,8 @@ export const projects: Project[] = [
   {
     title: "Inventory Stock Request System",
     category: "Desktop",
+    flagship: true,
+    flagshipIcon: Boxes,
     tagline: "Internal operations tool for Guanzon Group",
     description:
       "A desktop module handling item requests, multi-step approvals, and stock tracking for a company with heavy daily inventory movement. Built as part of the Guanzon Group's internal software, with debugging and stabilization work across testing cycles.",
