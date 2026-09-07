@@ -1,12 +1,17 @@
 import {
   Smartphone,
-  Monitor,
   Database,
   PenTool,
   Dumbbell,
   Leaf,
   TrendingUp,
   Boxes,
+  Globe,
+  Sparkles,
+  GraduationCap,
+  Users,
+  Rocket,
+  Code2,
   type LucideIcon,
 } from "lucide-react";
 
@@ -27,42 +32,49 @@ export const profile = {
 };
 
 export const about = {
-  bio: [
-    "I'm a Computer Science student at Pangasinan State University (Dean's Lister) and a mobile-first developer from Pangasinan, Philippines. Flutter and Dart are home base, but I move comfortably across the stack — Java desktop applications, web, and backend work with Firebase, Supabase, Node.js, and MySQL.",
-    "I like building products, not just code. I'm the founder and sole developer of a competition workout app — currently focused on powerlifting, with a community platform on the roadmap. I've led a startup team at DLSU's Sikaptala competition and shipped real internal software as a Junior Software Developer at Guanzon Group of Companies.",
+  heroEyebrow: "Product Developer",
+  heroTitle: "I design and build digital products from idea to release.",
+  heroSubtitle:
+    "I'm a Computer Science student and product-focused developer from Pangasinan, Philippines. I work across mobile apps, business systems, backend development, and UI/UX.",
+  capabilities: [
+    { icon: Smartphone, label: "Mobile Development" },
+    { icon: Globe, label: "Web Development" },
+    { icon: Boxes, label: "Business Systems" },
+    { icon: PenTool, label: "UI/UX" },
+    { icon: Database, label: "Backend" },
+    { icon: Sparkles, label: "AI Integration" },
+  ] satisfies { icon: LucideIcon; label: string }[],
+  proof: [
+    {
+      title: "Built & shipped real products",
+      description:
+        "Designed, developed, tested, and iterated on real applications.",
+    },
+    {
+      title: "Built business software",
+      description:
+        "Worked on inventory systems, approval workflows, databases, and operational tools.",
+    },
+    {
+      title: "Product-focused",
+      description:
+        "Comfortable moving from UI/UX and product thinking to implementation.",
+    },
   ],
-  services: [
-    {
-      icon: Smartphone,
-      title: "Mobile Apps",
-      description:
-        "Flutter/Dart apps built with real product thinking — Riverpod state management, Firebase & Supabase backends, end-to-end from Figma to release.",
-    },
-    {
-      icon: Monitor,
-      title: "Desktop Apps",
-      description:
-        "Java/JavaFX business applications — inventory systems, approval workflows, and stock tracking built for daily operational use.",
-    },
-    {
-      icon: Database,
-      title: "Backend & Data",
-      description:
-        "APIs and data layers with Firebase, Supabase, Node.js, and MySQL — auth, realtime sync, and clean data modeling.",
-    },
-    {
-      icon: PenTool,
-      title: "UI/UX Design",
-      description:
-        "Figma-first workflows: wireframes, design systems, and prototypes that translate 1:1 into the shipped interface.",
-    },
-  ] satisfies { icon: LucideIcon; title: string; description: string }[],
   highlights: [
-    { label: "Dean's Lister", sub: "Pangasinan State University" },
-    { label: "Startup Team Leader", sub: "Sikaptala @ DLSU" },
-    { label: "DevFest Baguio", sub: "Google Developer Groups" },
-    { label: "App Founder", sub: "Powerlifting competition app" },
-  ],
+    {
+      icon: GraduationCap,
+      label: "Dean's Lister",
+      sub: "Pangasinan State University",
+    },
+    { icon: Users, label: "Startup Team Leader", sub: "Sikaptala @ DLSU" },
+    { icon: Code2, label: "DevFest Baguio", sub: "Google Developer Groups" },
+    {
+      icon: Rocket,
+      label: "App Founder",
+      sub: "Powerlifting competition app",
+    },
+  ] satisfies { icon: LucideIcon; label: string; sub: string }[],
 };
 
 export const resume = {

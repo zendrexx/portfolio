@@ -9,19 +9,24 @@ import Resume from "@/components/sections/Resume";
 import Portfolio from "@/components/sections/Portfolio";
 import Contact from "@/components/sections/Contact";
 
-const sections: Record<Tab, React.ComponentType> = {
-  About,
-  Resume,
-  Portfolio,
-  Contact,
-};
-
 export default function Home() {
   const [active, setActive] = useState<Tab>("About");
+
+  const sections: Record<Tab, React.ReactNode> = {
+    About: (
+      <About
+        onViewPortfolio={() => setActive("Portfolio")}
+        onViewContact={() => setActive("Contact")}
+      />
+    ),
+    Resume: <Resume />,
+    Portfolio: <Portfolio />,
+    Contact: <Contact />,
+  };
   const Section = sections[active];
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-8 pb-24 lg:px-8 lg:pb-8">
+    <main className="mx-auto max-w-7xl px-4 py-8 pb-24 lg:px-8 lg:pb-8">
       <div className="grid gap-6 lg:grid-cols-[340px_1fr] lg:items-start">
         <Sidebar />
 
@@ -35,7 +40,7 @@ export default function Home() {
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
             >
-              <Section />
+              {Section}
             </motion.div>
           </AnimatePresence>
         </div>
