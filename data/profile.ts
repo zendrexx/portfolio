@@ -67,6 +67,18 @@ export const resume = {
   experience: [
     {
       role: "Founder & Developer",
+      org: "Zebite — AI Grocery Planner",
+      place: "Pangasinan, Philippines",
+      period: "2025 — Present",
+      current: true,
+      points: [
+        "Sole creator of an AI-powered grocery planning app — pantry-first meal generation, budget-capped grocery lists, and AI vision-based receipt/shelf scanning.",
+        "Handled end-to-end product, design, and full app + backend build (Flutter, Supabase, OpenAI).",
+        "Currently in 14-day closed testing ahead of release — now the main, active project.",
+      ],
+    },
+    {
+      role: "Founder & Developer",
       org: "Powerlifting competition app",
       place: "Pangasinan, Philippines",
       period: "Aug 2025 — Present",
