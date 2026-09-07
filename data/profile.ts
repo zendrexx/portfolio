@@ -5,6 +5,7 @@ import {
   PenTool,
   Dumbbell,
   Leaf,
+  TrendingUp,
   type LucideIcon,
 } from "lucide-react";
 
@@ -131,7 +132,7 @@ export const resume = {
   alsoKnow: ["JavaScript", "C++", "Go", "Python", "Git", "MS Excel"],
 };
 
-export type ProjectCategory = "Mobile" | "Desktop" | "Design";
+export type ProjectCategory = "Mobile" | "Desktop" | "Design" | "Research";
 
 export type Project = {
   title: string;
@@ -198,6 +199,19 @@ export const projects: Project[] = [
     image: "/outsource.png",
   },
   {
+    title: "Crypto Volatility Regime Detection",
+    category: "Research",
+    flagship: true,
+    flagshipIcon: TrendingUp,
+    tagline: "Thesis: does volume improve regime detection?",
+    description:
+      "Undergraduate thesis using Gaussian Hidden Markov Models to detect Bull/Sideways/Bear volatility regimes in crypto markets. Compares a standard OHLC-based model against a volume-augmented variant across 4 coins (BTC, ETH, DOGE, LTC), 3 timeframes (5m/15m/30m), and all 4 quarters of 2025 — 48 coin/timeframe/quarter cells per model, scored on log-likelihood, AIC, and BIC. Went beyond raw metric comparison with permutation controls to isolate how much of volume's contribution is genuine regime alignment versus distribution shape, plus a standalone rolling-volatility/volume-surprise analysis as metric-independent corroboration.",
+    role: "Sole researcher & developer — data pipeline, modeling, statistical analysis, and dashboard.",
+    tech: ["Python", "hmmlearn", "pandas", "NumPy", "scikit-learn", "Flask"],
+    gradient: "from-orange-500/30 via-amber-600/15 to-transparent",
+    initials: "BV",
+  },
+  {
     title: "Sikaptala Startup Pitch",
     category: "Design",
     tagline: "From original idea to competition pitch at DLSU",
@@ -211,4 +225,10 @@ export const projects: Project[] = [
   },
 ];
 
-export const projectFilters = ["All", "Mobile", "Desktop", "Design"] as const;
+export const projectFilters = [
+  "All",
+  "Mobile",
+  "Desktop",
+  "Design",
+  "Research",
+] as const;
