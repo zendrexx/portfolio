@@ -210,6 +210,7 @@ export const projects: Project[] = [
     tech: ["Python", "hmmlearn", "pandas", "NumPy", "scikit-learn", "Flask"],
     gradient: "from-orange-500/30 via-amber-600/15 to-transparent",
     initials: "BV",
+    image: "/hmm.png",
   },
   {
     title: "Sikaptala Startup Pitch",
