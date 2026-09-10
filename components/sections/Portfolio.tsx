@@ -60,7 +60,12 @@ export default function Portfolio() {
                 className="group overflow-hidden rounded-2xl border border-edge bg-raised text-left transition-shadow hover:shadow-[0_8px_40px_-12px_rgba(230,179,37,0.25)]"
               >
                 <div
-                  className={`relative flex h-40 items-center justify-center overflow-hidden bg-gradient-to-br ${project.gradient}`}
+                  className={`relative flex items-center justify-center overflow-hidden bg-gradient-to-br ${project.gradient}`}
+                  style={{
+                    aspectRatio: project.image
+                      ? (project.previewAspect ?? 16 / 10)
+                      : 16 / 10,
+                  }}
                 >
                   {project.image ? (
                     <Image

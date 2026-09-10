@@ -25,14 +25,6 @@ const selectedWork = SELECTED_WORK_TITLES.map((title) =>
   projects.find((p) => p.title === title)
 ).filter((p): p is Project => Boolean(p));
 
-// Each screenshot's native aspect ratio, so cards show the full image
-// (headline copy + device mockups) instead of a center/edge crop.
-const NATIVE_ASPECT: Record<string, number> = {
-  "/zebite.png": 1200 / 630,
-  "/powerliftinghor.png": 1536 / 1024,
-  "/outsource.png": 1630 / 965,
-};
-
 function WorkCard({
   project,
   featured = false,
@@ -58,7 +50,7 @@ function WorkCard({
         className={`relative overflow-hidden bg-linear-to-br ${project.gradient}`}
         style={{
           aspectRatio: project.image
-            ? (NATIVE_ASPECT[project.image] ?? 16 / 10)
+            ? (project.previewAspect ?? 16 / 10)
             : 16 / 10,
         }}
       >

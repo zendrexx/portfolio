@@ -160,6 +160,8 @@ export type Project = {
   gradient: string;
   initials: string;
   image?: string;
+  /** Native screenshot ratio, used to prevent project previews from cropping UI copy. */
+  previewAspect?: number;
 };
 
 export const projects: Project[] = [
@@ -184,6 +186,7 @@ export const projects: Project[] = [
     gradient: "from-emerald-500/30 via-green-700/15 to-transparent",
     initials: "ZB",
     image: "/zebite.png",
+    previewAspect: 1200 / 630,
   },
   {
     title: "Powerlifting competition app",
@@ -198,6 +201,7 @@ export const projects: Project[] = [
     gradient: "from-amber-500/30 via-yellow-600/15 to-transparent",
     initials: "GW",
     image: "/powerliftinghor.png",
+    previewAspect: 1672 / 941,
   },
   {
     title: "Inventory Stock Request System",
@@ -212,6 +216,7 @@ export const projects: Project[] = [
     gradient: "from-sky-500/25 via-indigo-600/10 to-transparent",
     initials: "IS",
     image: "/outsource.png",
+    previewAspect: 1672 / 941,
   },
   {
     title: "Crypto Volatility Regime Detection",
@@ -226,6 +231,7 @@ export const projects: Project[] = [
     gradient: "from-orange-500/30 via-amber-600/15 to-transparent",
     initials: "BV",
     image: "/hmm.png",
+    previewAspect: 1115 / 729,
   },
   {
     title: "Sikaptala Startup Pitch",
@@ -238,6 +244,7 @@ export const projects: Project[] = [
     gradient: "from-emerald-500/25 via-teal-600/10 to-transparent",
     initials: "SK",
     image: "/sikaptala.png",
+    previewAspect: 3840 / 2160,
   },
 ];
 
